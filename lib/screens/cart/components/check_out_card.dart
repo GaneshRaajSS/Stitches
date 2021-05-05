@@ -55,7 +55,6 @@ class CheckoutCard extends StatelessWidget {
                 Icon(
                   Icons.arrow_forward_ios,
                   size: 12,
-                  color: kTextColor,
                 )
               ],
             ),

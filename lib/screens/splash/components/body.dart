@@ -45,13 +45,16 @@ class _BodyState extends State<Body> {
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(0, 0, 0, 50),
-              child: DefaultButton(
-                text: "Continue",
-                press: () {
-                  Navigator.pushNamed(context, SignInScreen.routeName);
-                },
+            Container(
+              color: Colors.orangeAccent,
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(0, 0, 0, 10),
+                child: DefaultButton(
+                  text: ("Continue"),
+                  press: () {
+                    Navigator.pushNamed(context, SignInScreen.routeName);
+                  },
+                ),
               ),
             ),
           ],

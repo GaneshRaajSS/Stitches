@@ -11,45 +11,26 @@ class Body extends StatelessWidget {
       child: SizedBox(
         width: double.infinity,
         child: Padding(
-          padding:
-              EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
+          padding: EdgeInsets.symmetric(horizontal: 20),
           child: SingleChildScrollView(
             child: Column(
               children: [
-                SizedBox(height: SizeConfig.screenHeight * 0.04),
+                SizedBox(height: 5),
                 Text(
                   "Welcome Back",
                   style: TextStyle(
                     color: Colors.black,
-                    fontSize: getProportionateScreenWidth(28),
+                    fontSize: 28,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                Text(
-                  "Sign in with your email and password  \nor continue with social media",
-                  textAlign: TextAlign.center,
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(child: SizedBox(height: 7)),
                 ),
-                SizedBox(height: SizeConfig.screenHeight * 0.08),
                 SignForm(),
-                SizedBox(height: SizeConfig.screenHeight * 0.08),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SocalCard(
-                      icon: "assets/icons/google-icon.svg",
-                      press: () {},
-                    ),
-                    SocalCard(
-                      icon: "assets/icons/facebook-2.svg",
-                      press: () {},
-                    ),
-                    SocalCard(
-                      icon: "assets/icons/twitter.svg",
-                      press: () {},
-                    ),
-                  ],
-                ),
-                SizedBox(height: getProportionateScreenHeight(20)),
+                SizedBox(height: 7),
+                SizedBox(height: 20),
                 NoAccountText(),
               ],
             ),

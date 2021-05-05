@@ -16,7 +16,7 @@ ThemeData theme() {
 InputDecorationTheme inputDecorationTheme() {
   OutlineInputBorder outlineInputBorder = OutlineInputBorder(
     borderRadius: BorderRadius.circular(28),
-    borderSide: BorderSide(color: kTextColor),
+    borderSide: BorderSide(color: Colors.black45),
     gapPadding: 10,
   );
   return InputDecorationTheme(
@@ -30,8 +30,8 @@ InputDecorationTheme inputDecorationTheme() {
 
 TextTheme textTheme() {
   return TextTheme(
-    bodyText1: TextStyle(color: kTextColor),
-    bodyText2: TextStyle(color: kTextColor),
+    bodyText1: TextStyle(color: Colors.black45),
+    bodyText2: TextStyle(color: Colors.black45),
   );
 }
 

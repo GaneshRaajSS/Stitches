@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app/size_config.dart';
 
+const kAnimationDuration = Duration(milliseconds: 200);
+
 final headingStyle = TextStyle(
   fontSize: getProportionateScreenWidth(28),
   fontWeight: FontWeight.bold,
@@ -32,6 +34,5 @@ final otpInputDecoration = InputDecoration(
 OutlineInputBorder outlineInputBorder() {
   return OutlineInputBorder(
     borderRadius: BorderRadius.circular(getProportionateScreenWidth(15)),
-    borderSide: BorderSide(color: Colors.black45),
   );
 }

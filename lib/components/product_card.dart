@@ -37,7 +37,6 @@ class ProductCard extends StatelessWidget {
                 child: Container(
                   padding: EdgeInsets.all(getProportionateScreenWidth(20)),
                   decoration: BoxDecoration(
-                    color: kSecondaryColor.withOpacity(0.1),
                     borderRadius: BorderRadius.circular(15),
                   ),
                   child: Hero(
@@ -60,7 +59,6 @@ class ProductCard extends StatelessWidget {
                     style: TextStyle(
                       fontSize: getProportionateScreenWidth(18),
                       fontWeight: FontWeight.w600,
-                      color: kPrimaryColor,
                     ),
                   ),
                   InkWell(
@@ -70,12 +68,7 @@ class ProductCard extends StatelessWidget {
                       padding: EdgeInsets.all(getProportionateScreenWidth(8)),
                       height: getProportionateScreenWidth(28),
                       width: getProportionateScreenWidth(28),
-                      decoration: BoxDecoration(
-                        color: product.isFavourite
-                            ? kPrimaryColor.withOpacity(0.15)
-                            : kSecondaryColor.withOpacity(0.1),
-                        shape: BoxShape.circle,
-                      ),
+                      decoration: BoxDecoration(),
                       child: SvgPicture.asset(
                         "assets/icons/Heart Icon_2.svg",
                         color: product.isFavourite

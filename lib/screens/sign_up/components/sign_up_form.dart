@@ -7,7 +7,6 @@ import 'package:shop_app/screens/complete_profile/complete_profile_screen.dart';
 import '../../../constants.dart';
 import '../../../size_config.dart';
 
-
 class SignUpForm extends StatefulWidget {
   @override
   _SignUpFormState createState() => _SignUpFormState();
@@ -39,26 +38,33 @@ class _SignUpFormState extends State<SignUpForm> {
   Widget build(BuildContext context) {
     return Form(
       key: _formKey,
-      child: Column(
-        children: [
-          buildEmailFormField(),
-          SizedBox(height: getProportionateScreenHeight(30)),
-          buildPasswordFormField(),
-          SizedBox(height: getProportionateScreenHeight(30)),
-          buildConformPassFormField(),
-          FormError(errors: errors),
-          SizedBox(height: getProportionateScreenHeight(40)),
-          DefaultButton(
-            text: "Continue",
-            press: () {
-              if (_formKey.currentState.validate()) {
-                _formKey.currentState.save();
-                // if all are valid then go to success screen
-                Navigator.pushNamed(context, CompleteProfileScreen.routeName);
-              }
-            },
-          ),
-        ],
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+        child: Column(
+          children: [
+            buildEmailFormField(),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SizedBox(),
+            ),
+            buildPasswordFormField(),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SizedBox(),
+            ),
+            buildConformPassFormField(),
+            FormError(errors: errors),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SizedBox(),
+            ),
+            DefaultButton(
+                text: "Continue",
+                press: () {
+                  Navigator.pushNamed(context, CompleteProfileScreen.routeName);
+                }),
+          ],
+        ),
       ),
     );
   }
@@ -88,8 +94,6 @@ class _SignUpFormState extends State<SignUpForm> {
       decoration: InputDecoration(
         labelText: "Confirm Password",
         hintText: "Re-enter your password",
-        // If  you are using latest version of flutter then lable text and hint text shown like this
-        // if you r using flutter less then 1.20.* then maybe this is not working properly
         floatingLabelBehavior: FloatingLabelBehavior.always,
         suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Lock.svg"),
       ),
@@ -121,8 +125,6 @@ class _SignUpFormState extends State<SignUpForm> {
       decoration: InputDecoration(
         labelText: "Password",
         hintText: "Enter your password",
-        // If  you are using latest version of flutter then lable text and hint text shown like this
-        // if you r using flutter less then 1.20.* then maybe this is not working properly
         floatingLabelBehavior: FloatingLabelBehavior.always,
         suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Lock.svg"),
       ),
@@ -154,8 +156,6 @@ class _SignUpFormState extends State<SignUpForm> {
       decoration: InputDecoration(
         labelText: "Email",
         hintText: "Enter your email",
-        // If  you are using latest version of flutter then lable text and hint text shown like this
-        // if you r using flutter less then 1.20.* then maybe this is not working properly
         floatingLabelBehavior: FloatingLabelBehavior.always,
         suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Mail.svg"),
       ),

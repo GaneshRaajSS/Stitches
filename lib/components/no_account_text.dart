@@ -23,10 +23,10 @@ class NoAccountText extends StatelessWidget {
           child: Text(
             "Sign Up",
             style: TextStyle(
-                fontSize: getProportionateScreenWidth(16),
-                color: kPrimaryColor),
+              fontSize: getProportionateScreenWidth(16),
+            ),
           ),
-        ),
+        )
       ],
     );
   }

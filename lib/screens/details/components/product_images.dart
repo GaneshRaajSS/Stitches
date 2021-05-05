@@ -61,7 +61,8 @@ class _ProductImagesState extends State<ProductImages> {
           color: Colors.white,
           borderRadius: BorderRadius.circular(10),
           border: Border.all(
-              color: kPrimaryColor.withOpacity(selectedImage == index ? 1 : 0)),
+              color:
+                  Colors.black45.withOpacity(selectedImage == index ? 1 : 0)),
         ),
         child: Image.asset(widget.product.images[index]),
       ),
